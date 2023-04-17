@@ -8,31 +8,17 @@ First, run the development server:
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-```
+
+npm i
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Requirements
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+What to build Using a Javascript library of your choice, build a collection page that displays bundles filtered based on selected scent option(s). Use the following API endpoints to retrieve the data:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Base URL: https://ae3t7l1i79.execute-api.us-east-1.amazonaws.com/ Endpoints: GET /bundles, GET /product/{handle}
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Requirements Display the following information for a bundle: image, title, price, original price (if applicable), scent profile, and included products. The scent filter should be at the top of the page, with available scent options listed. It may be a group of checkboxes, a drop down, or any other UI format you want. The filter must be functional; the options selected updates the bundles displayed. See the design example below. You may use it as is or modify it. Feel free to come up with your own design if you want. (Optional) Make the page responsive. (Optional) Use the scent specific colors: woodsy: #165834, citrus: #de7c00, fresh: #006fd6, herbal: #5a3714, rich: #e0a17e, spiced: #c10000
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<img width="400" alt="Screen Shot" src="https://user-images.githubusercontent.com/3441200/232391125-0c2a3ba7-a2f4-4d79-be2a-9a9239102b24.png">
