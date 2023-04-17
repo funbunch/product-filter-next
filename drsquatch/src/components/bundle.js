@@ -27,6 +27,7 @@ export const Bundles = () => {
           //console.log(bundle.scentTag)
           return bundle
         })
+        
         setBundles(scentProfile)
         setSelectedScents(scentProfile)
       }
@@ -94,9 +95,9 @@ const handleScentchange= (e) => {
                 </div>
                 <div className={styles.included}>
                   <span className={styles.heading}>Included</span>
-                    {products_included.map((product, i) => (
-                      <span key={i} className={styles.product}>{product.replace('-', ' ')},&nbsp;</span>  
-                      ))}
+                      {products_included.map((product, i) => (
+                        <span key={i} className={styles.product}>{product.replace('-', ' ')}{i < products_included.length - 1 ? <>,&nbsp;</> : null}</span>  
+                      ))} 
                 </div>
             </div>
           )
