@@ -95,10 +95,7 @@ const handleScentchange= (e) => {
                 <div className={styles.included}>
                   <span className={styles.heading}>Included</span>
                     {products_included.map((product, i) => (
-                      <span key={i} className={styles.product}>{product.replace('-', ' ')},&nbsp;</span>
-                      // if (product === product[product.length - 1]) {
-                      //   {product.replace(',', '')} 
-                      // }   
+                      <span key={i} className={styles.product}>{product.replace('-', ' ')},&nbsp;</span>  
                       ))}
                 </div>
             </div>
