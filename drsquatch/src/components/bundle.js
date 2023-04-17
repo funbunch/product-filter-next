@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import fetch from 'isomorphic-unfetch';
 import React from 'react';
-import styles from './index.module.scss'
+import styles from './bundle.module.scss'
 
 export const Bundles = () => {
   const [bundles, setBundles] = useState([])
