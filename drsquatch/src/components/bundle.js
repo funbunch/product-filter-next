@@ -24,7 +24,7 @@ export const Bundles = () => {
           } else if (bundle.handle === 'bun-deo-soap-set') {
               bundle.scentTag = ['woodsy', 'citrus', 'rich', 'spiced', 'herbal']
           }
-          console.log(bundle.scentTag)
+          //console.log(bundle.scentTag)
           return bundle
         })
         setBundles(scentProfile)
@@ -41,22 +41,16 @@ export const Bundles = () => {
     switch(tag) {
         case 'woodsy':
             return '#165834'
-            break;
         case 'citrus':
             return '#de7c00'
-            break;
         case 'fresh':
             return '#006fd6'
-            break;
         case 'herbal':
             return '#5a3714'
-            break;
         case 'rich':
             return '#e0a17e'
-            break;
         case 'spiced':
             return '#c10000'
-            break;
         default: return '#165834'
     }
 }
@@ -72,7 +66,7 @@ const handleScentchange= (e) => {
     <div className={styles.container}>
       <h1>Dr. Squatch</h1>
       <section>
-        <h2>Select a scent:</h2>
+        <h3>Select a scent:</h3>
         <div className={styles.menu}>
           {scentTags.map((tag, i) => (
             <span onClick={handleScentchange} className={styles.button} key={i} style={{background: getTagColor(tag)}} data-tag={tag}>{tag}</span>
@@ -93,16 +87,19 @@ const handleScentchange= (e) => {
                     {originalPrice ? (<span>${formattedPrice}</span>) : null}
                     <span>${formattedPrice}</span>
                 </div>
-                <div>
+                <div className={styles.tagRow}>
                     {scentTag.map((tag, i) => (
-                        <span key={i}>{tag}</span>
+                        <span key={i} className={styles.tag} style={{background: getTagColor(tag)}}>{tag}</span>
                     ))}
                 </div>
-                <div>
-                    <span>Included</span>
+                <div className={styles.included}>
+                  <span className={styles.heading}>Included</span>
                     {products_included.map((product, i) => (
-                        <span key={i}>{product.replace('-', ' ')},&nbsp;</span>
-                    ))}
+                      <span key={i} className={styles.product}>{product.replace('-', ' ')},&nbsp;</span>
+                      // if (product === product[product.length - 1]) {
+                      //   {product.replace(',', '')} 
+                      // }   
+                      ))}
                 </div>
             </div>
           )
