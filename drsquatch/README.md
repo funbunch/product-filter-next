@@ -2,14 +2,14 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-
+First, 
 npm i
+
+Then run the development server:
+
+npm run dev
+or
+yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
@@ -21,5 +21,6 @@ Base URL: https://ae3t7l1i79.execute-api.us-east-1.amazonaws.com/ Endpoints: GET
 
 Requirements Display the following information for a bundle: image, title, price, original price (if applicable), scent profile, and included products. The scent filter should be at the top of the page, with available scent options listed. It may be a group of checkboxes, a drop down, or any other UI format you want. The filter must be functional; the options selected updates the bundles displayed. See the design example below. You may use it as is or modify it. Feel free to come up with your own design if you want. (Optional) Make the page responsive. (Optional) Use the scent specific colors: woodsy: #165834, citrus: #de7c00, fresh: #006fd6, herbal: #5a3714, rich: #e0a17e, spiced: #c10000
 
-##
+
 ![Screen Shot](https://user-images.githubusercontent.com/3441200/232398268-a641ffdb-fc08-4c97-bfa2-181ce084b11d.png)
+
